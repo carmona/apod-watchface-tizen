@@ -77,7 +77,7 @@ function displayTime() {
 }
 
 function initDigitalWatch() {
-    document.getElementsByTagName('body')[0].style.backgroundImage = "url('/images/bg.jpg')";
+    //document.getElementsByTagName('body')[0].style.backgroundImage = "url('/images/bg.jpg')";
     interval = setInterval(displayTime, 500);
 }
 
@@ -121,7 +121,20 @@ function bindEvents() {
         }
     });
 }
-
+function trocaFonte(){
+    var contador = 0;
+    var classes = ['sarpanch','sharetech','orbitron'];
+    setInterval(function(){
+        document.querySelector('#carmona').className = classes[contador];
+        document.querySelector('#nomeclasse').text = document.querySelector('#carmona').className;
+        //contador = (contador < 6) ? contador++ : 0;
+        if(contador < 2){
+            contador++;
+        }else{
+            contador = 0;
+        }
+    }, 2000);
+}
 window.onload = function() {
     document.addEventListener('tizenhwkey', function(e) {
         if (e.keyName === "back") {
@@ -134,4 +147,5 @@ window.onload = function() {
     displayTime();
     initDigitalWatch();
     bindEvents();
+    //trocaFonte();
 };
