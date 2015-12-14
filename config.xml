@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/DigitalWatch" version="1.0.0" viewmodes="maximized">
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://filipecarmona/ApodWatchface" version="0.1.0" viewmodes="maximized">
+    <access origin="nasa.gov" subdomains="true"/>
     <tizen:application id="SBLO1kP0q0.DigitalWatch" package="SBLO1kP0q0" required_version="2.3.1" ambient_support="enable"/>
+    <author href="https://filipecarmona.com.br" email="eu@filipecarmona.com.br">Filipe Carmona</author>
     <tizen:category name="http://tizen.org/category/wearable_clock"/>
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
+    <feature name="http://tizen.org/feature/location.gps"/>
+    <feature name="http://tizen.org/feature/network.internet"/>
     <icon src="icon.png"/>
-    <name>DigitalWatch</name>
+    <name>ApodWatchface</name>
     <tizen:privilege name="http://tizen.org/privilege/alarm"/>
+    <tizen:privilege name="http://tizen.org/privilege/location"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
     <tizen:profile name="wearable"/>
     <tizen:setting background-support="disable" encryption="disable" hwkey-event="enable"/>
 </widget>
