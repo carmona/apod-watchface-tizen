@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://filipecarmona/ApodWatchface" version="0.1.0" viewmodes="maximized">
-    <access origin="nasa.gov" subdomains="true"/>
+    <access origin="nasa.gov" subdomains="true"></access>
     <tizen:application id="SBLO1kP0q0.DigitalWatch" package="SBLO1kP0q0" required_version="2.3.1" ambient_support="enable"/>
     <author href="https://filipecarmona.com.br" email="eu@filipecarmona.com.br">Filipe Carmona</author>
     <tizen:category name="http://tizen.org/category/wearable_clock"/>

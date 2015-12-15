@@ -9,6 +9,12 @@
 html, body {
     margin: 0;
     height: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body {
@@ -50,8 +56,6 @@ body {
 #batt-val {
 	height:100%;
 	min-width:1%;
-	/* essa parte é alterada pelo js */
-	/*width:60%;*/
 	background-color: green;
 }
 
@@ -59,7 +63,8 @@ body {
 	display:block;
 	width:100%;
 	text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
-	font-size: 4.99em; font-size: 22vw;
+	font-size: 4.55em; font-size: 20vw;
+	margin:auto;
 }
 
 #data {
@@ -67,6 +72,7 @@ body {
 	margin: auto;
     width: 70%;
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+    margin:auto;
 }
 
 #dia {
