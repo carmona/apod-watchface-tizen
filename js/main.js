@@ -14,15 +14,14 @@ function configuracoes(){
     if(!localStorage.getItem("apodTitulo")){
         localStorage.setItem("apodTitulo","When Gemini Sends Stars to Paranal");
     }
-    if(localStorage.getItem("apodImg")){
-
+    if(!localStorage.getItem("apodUrl")){
+        localStorage.setItem("apodUrl","../images/paranalgeminids_guisard.jpg");
     }
     $.ajaxSetup({
         url: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",
         success: sucesso,
         error: trataErro
     });
-    $.ajax();
 }
 
 function atualizarHora(){
@@ -49,15 +48,6 @@ function mostrarHora(){
     },faltaParaMinuto*1000);
 }
 
-function sucesso(event, xhr, options){
-    if(options.status === 200 && event.media_type === "image"){
-        localStorage.setItem("apodTitulo", event.title);
-        apodUrl = event.url;
-        baixarImagem(event.url);
-        
-    }
-}
-
 function baixarImagem(url){
     $.ajax({
         url:url,
@@ -70,13 +60,23 @@ function baixarImagem(url){
     });
 }
 
-function trocarFundo(texto){
-    document.querySelector("#apod-back").style.backgroundImage = "data:image/jpg;base64,"+localStorage.getItem("apodImg");
+function sucesso(event, xhr, options){
+    if(options.status === 200 && event.media_type === "image"){
+        localStorage.setItem("apodTitulo", event.title);
+        localStorage.setItem("apodUrl", event.url);
+        //baixarImagem(event.url);
+        trocarFundo();
+    }
 }
 
 function trataErro(data){
     console.dir(data);
     alert("update service unavailable");
+}
+
+function trocarFundo(){
+    //$("#apod-back").css("background-image","url(data:image/jpg;base64"+texto);
+    document.querySelector("#apod-back").style.backgroundImage = "url('"+localStorage.getItem("apodUrl")+"')";
 }
 
 function mostrarTitulo(){
