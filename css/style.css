@@ -6,6 +6,11 @@
   50% { opacity: 0.0; }
 }
 
+ @font-face {
+      font-family: "Sarpanch";
+      src: url("../fonts/Sarpanch regular.ttf");
+    }
+
 html, body {
     margin: 0;
     height: 100%;
@@ -20,7 +25,7 @@ html, body {
 body {
 	width: 100%;
 	height: 100%;
-	background-image: url('/images/ParanalGeminids_Guisard_1200.jpg');
+	background-image: url('../images/ParanalGeminids_Guisard_1200.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: #000000;
@@ -28,21 +33,26 @@ body {
 	overflow: hidden;
 	font-family: 'Sarpanch', sans-serif;
 	color:white;
+	/* REMOVER ISSO AQUI ANTES DE PUBLICAR!!!!!! 
+	border: 1px solid white;
+    border-radius: 50%;
+    */
 }
 
 #centro {
-	width:70%;
-	height:60%;
-	padding:20% 15% 20% 15%;
+	width:90%;
+	height:80%;
+	padding:15% 5% 5% 5%;
 }
 
 #batt-frame {
 	display:block;
-	margin-left: 75%;
 	width: 25%;
 	height: 10%;
 	border: solid 2px white;
 	position:relative;
+	opacity: 0.5;
+	margin:auto;
 }
 #batt-frame::after {
 	content: '';
@@ -63,22 +73,25 @@ body {
 	display:block;
 	width:100%;
 	text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
-	font-size: 4.55em; font-size: 20vw;
+	font-size: 5.5em; font-size: 25vw;
 	margin:auto;
+	text-align: center;
 }
 
 #data {
 	display: block;
 	margin: auto;
-    width: 70%;
+    width: 100%;
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
     margin:auto;
+    text-align:center;
 }
 
 #dia {
-	font-size: 2em; font-size: 10vw;
+	margin: auto;
+	font-size: 2.5em; font-size: 11vw;
 }
-
+/*
 @media screen and (-tizen-geometric-shape: circle) {
 	#str_hours {
 		font-size: 600%;
@@ -96,3 +109,4 @@ body {
 		left: 27%;
 	}
 }
+*/
